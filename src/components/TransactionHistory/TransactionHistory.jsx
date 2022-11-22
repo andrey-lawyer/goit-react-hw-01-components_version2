@@ -1,26 +1,32 @@
 import PropTypes from 'prop-types';
-import css from './TransactionHistory.module.css';
+import {
+  TableHistory,
+  TitleLines,
+  TitleSells,
+  LinesColumns,
+  Sells,
+  Lines
+} from './TransactionHistory.styled';
 
 export const TransactionHistory = ({ items }) => {
     return (
-        <table className={css["transaction-history"]}>
+        <TableHistory>
   <thead>
-    <tr className={css.title_lines}>
-      <th className = {css.title_cells}>Type</th>
-      <th className = {css.title_cells}>Amount</th>
-      <th className ={css.title_cells}>Currency</th>
-    </tr>
+    <TitleLines>
+      <TitleSells>Type</TitleSells>
+      <TitleSells>Amount</TitleSells>
+      <TitleSells>Currency</TitleSells>
+    </TitleLines>
   </thead>
-            <tbody className={css.lines_columns}>
-                {items.map(({ id, type, amount, currency },index) => (
-                    <tr  className={index % 2 === 0 ? css.line_white : css.line_grey } key={id} >
-                        <td className = {css.cells}>{type}</td>
-                        <td className = {css.cells}>{amount}</td>
-                        <td className = {css.cells}>{currency}</td>
-                    </tr>))}
-          
-  </tbody>
-</table>    
+            <LinesColumns>
+                {items.map(({ id, type, amount, currency }, index) => (
+                  <Lines index={index % 2}  key={id} >
+                        <Sells>{type}</Sells>
+                        <Sells>{amount}</Sells>
+                        <Sells>{currency}</Sells>
+                    </Lines>))}         
+  </LinesColumns>
+</TableHistory>    
   );
 };
 

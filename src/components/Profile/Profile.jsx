@@ -1,5 +1,16 @@
 import PropTypes from 'prop-types';
-import css from './Profile.module.css';
+import {
+  ProfileUser,
+  DescriptionUser,
+  ImgUser,
+  NameUser,
+  TagUser,
+  LocationUser,
+  StatsListUser,
+  StatsItemtUser,
+  StatsLabelUser,
+  StatsquantityUser
+} from './Profile.styled';
 
 export const Profile = (
   // {cardUser}
@@ -12,34 +23,33 @@ export const Profile = (
     avatar,
     stats: {followers, views, likes },} = props.cardUser;
   return (
-    <div className= {css.profile}>
-   <div className={css.description}> 
-    <img
+    <ProfileUser>
+   <DescriptionUser> 
+    <ImgUser
       src={avatar}
-      alt= "User avatar"
-      className={css.avatar}
+      alt= "User avatar"     
     />
-        <p className={css.name}>{username}</p>
-        <p className={css.tag}>@{tag}</p>
-        <p className={css.location}>{location}</p>
-  </div>
+        <NameUser>{username}</NameUser>
+        <TagUser>@{tag}</TagUser>
+        <LocationUser>{location}</LocationUser>
+  </DescriptionUser>
 
-  <ul className={css.stats}>
-     <li className={css.stats_item}>
-        <span className={css.label}>Followers</span>
-        <span className={css.quantity}>{followers}</span>
-     </li>
+  <StatsListUser>
+     <StatsItemtUser>
+        <StatsLabelUser>Followers</StatsLabelUser>
+        <StatsquantityUser>{followers}</StatsquantityUser>
+     </StatsItemtUser>
         
-    <li className={css.stats_item}>
-          <span className={css.label}>Views</span>
-          <span className={css.quantity}>{views}</span>
-    </li>
-    <li className={css.stats_item}>
-          <span className={css.label}>Likes</span>
-      <span className={css.quantity}>{likes}</span>
-    </li> 
-  </ul>
-</div>    
+    <StatsItemtUser>
+          <StatsLabelUser>Views</StatsLabelUser>
+          <StatsquantityUser>{views}</StatsquantityUser>
+    </StatsItemtUser>
+    <StatsItemtUser>
+          <StatsLabelUser>Likes</StatsLabelUser>
+      <StatsquantityUser>{likes}</StatsquantityUser>
+    </StatsItemtUser> 
+  </StatsListUser>
+</ProfileUser>    
   );
 };
 
