@@ -1,0 +1,32 @@
+.statistics {
+  margin: 0 auto;
+  width: 300px;
+  background-color: white;
+  box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    0px 1px 1px rgba(0, 0, 0, 0.12);
+}
+.stats-list {
+  display: flex;
+}
+.title {
+  text-align: center;
+  padding-top: 20px;
+  margin-bottom: 20px;
+  color: gray;
+}
+/* .background_title {
+  height: 60px;
+} */
+.label {
+  display: block;
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+.item {
+  padding-bottom: 10px;
+  padding-top: 10px;
+  margin: 0;
+  text-align: center;
+  /* outline: solid 1px rgba(220, 214, 214, 0.772); */
+  width: 70px;
+}
