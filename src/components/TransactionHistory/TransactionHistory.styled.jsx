@@ -8,14 +8,6 @@ import styled from 'styled-components';
   box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
   0px 1px 1px rgba(0, 0, 0, 0.12);
   border-collapse: collapse;
-
-  width: 207px;
-  margin: 0 auto;
-  padding-top: ${props => props.theme.spacing(2)};
-  margin-bottom: ${props => props.theme.spacing(5)};
-  background-color: ${props => props.theme.colors.white};
-  box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    0px 1px 1px rgba(0, 0, 0, 0.12);
 `;
 
 export const TitleLines = styled.tr`
@@ -38,7 +30,7 @@ export const Sells = styled.td`
   `;
 
   export const Lines = styled.tr`
-   background-color: ${({ index, theme }) => {
+   background-color: ${({index, theme}) => {
       return index === 0?  theme.colors.lineGreyTable:  theme.colors.white; 
   }};
   `;
