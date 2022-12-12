@@ -5,7 +5,7 @@ export const SectionStat = styled.section`
   width: 300px;
   background-color: ${props => props.theme.colors.white};
   box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
-  0px 1px 1px rgba(0, 0, 0, 0.12); 
+    0px 1px 1px rgba(0, 0, 0, 0.12);
 `;
 
 export const TitleStat = styled.h2`
@@ -25,6 +25,7 @@ export const ItemStat = styled.li`
   margin: 0;
   text-align: center;
   width: 70px;
+  background-color: ${props => props.theme.backgroundColorRandom};
 `;
 
 export const LabelStat = styled.span`
@@ -33,5 +34,4 @@ export const LabelStat = styled.span`
   margin-bottom: ${props => props.theme.spacing(1)};
 `;
 
-export const PersentageStat = styled.span`
-`;
+export const PersentageStat = styled.span``;

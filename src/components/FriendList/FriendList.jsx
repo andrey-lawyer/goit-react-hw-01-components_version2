@@ -3,27 +3,27 @@ import { FriendListItem } from 'components/FriendListItem/FriendListItem';
 import { FriendListUser } from './FriendList.styled';
 
 export const FriendList = ({ friends }) => {
-    return (
-        <FriendListUser>   
+  return (
+    <FriendListUser>
       {friends.map(({ id, name, avatar, isOnline }) => (
-          <FriendListItem
+        <FriendListItem
           key={id}
           avatar={avatar}
           name={name}
-          isOnline={isOnline}        
+          isOnline={isOnline}
         />
-      ))}  
-        </FriendListUser>
+      ))}
+    </FriendListUser>
   );
 };
 
 FriendList.propTypes = {
-     friends: PropTypes.arrayOf(
-      PropTypes.exact({
+  friends: PropTypes.arrayOf(
+    PropTypes.exact({
       id: PropTypes.number.isRequired,
       avatar: PropTypes.string.isRequired,
-       name: PropTypes.string.isRequired, 
+      name: PropTypes.string.isRequired,
       isOnline: PropTypes.bool.isRequired,
-      }),
-    ),
-}
+    })
+  ),
+};

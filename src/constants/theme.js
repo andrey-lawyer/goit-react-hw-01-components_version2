@@ -13,4 +13,6 @@ export const theme = Object.freeze({
     SellsTable: 'rgb(195, 192, 192)',
   },
   spacing: value => `${4 * value}px`,
+  backgroundColorRandom: () =>
+    `#${Math.floor(Math.random() * 16777215).toString(16)}`,
 });
